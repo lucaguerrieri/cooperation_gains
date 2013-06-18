@@ -1,0 +1,20 @@
+Hi Luca,
+
+please find attached the full IMF review model files for a simple instrument rule, 
+the ramsey policy and the nash policy both with complete and incomplete markets.
+
+The file call_nonlinearnopot contains the information for the .mod files. 
+The folder contains the steady state files as well. In detail:
+
+nonlinearnopot - instrument rule, incomplete markets
+nonlinearnopotcomp - instrument rule, complete markets
+nonlinearnopot_ramsey  - ramsey, incomplete markets
+nonlinearnopot_nash - nash, incomplete markets
+nonlinearnopotcomp_ramsey - ramsey, complete markets
+nonlinearnopotcomp_nash - nash, complete markets
+
+The layout of the parameter files is as in the IMF review project. 
+Key for now is link the programs to the welfare programs to compute consumption compensations. 
+I can the play with the parameterisation, although for now I intend to 
+stick with the one we have with the exception of consumption habits 
+which need to be sufficiently low for all models to solve.

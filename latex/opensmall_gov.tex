@@ -1,0 +1,845 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Monday, December 05, 2011 10:39:29}
+%TCIDATA{LastRevised=Wednesday, May 08, 2013 17:49:27}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\renewcommand{\arraystretch}{0.5}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\headheight}{0in} \setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{0.0in} \setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.5in} \setlength{\topmargin}{0.0in}
+\setlength{\footskip}{0.42in} \setlength{\footnotesep}{0.14in}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+\title{A New Keynesian Model with Irreversible Capital}
+\author{}
+\maketitle
+
+\bigskip
+
+\section{The model}
+
+To introduce sticky prices we need to take a stand on a decentralization
+scheme.
+
+\bigskip
+
+A continuum of identical households maximizes: 
+\[
+\max_{C_{t},I_{t},K_{t+1},B_{t+1}}E_{t}\dsum\limits_{t=0}^{\infty }\beta ^{t}%
+\frac{\left( C_{t}-\mu _{ct}\right) ^{1-\gamma }-1}{1-\gamma }-\frac{%
+\varkappa _{0}L_{t}^{1+\varkappa }}{1+\varkappa }
+\]%
+\[
+\mu _{ct}=\rho \mu _{ct-1}-\varepsilon _{\mu },
+\]%
+subject to 
+\[
+P_{ct}C_{t}+P_{t}I_{t}+\psi P_{t}\left( \frac{K_{t+1}-K_{t}}{K_{t}}\right)
+^{2}+P_{Ft}P_{Bt}^{\ast
+}B_{Ft+1}+\int_{s(t+1)}P_{Bt}B_{Dt+1}=R_{kt}K_{t}+P_{Ft}B_{Ft}+B_{Dt}+\Pi
+_{t}-T_{t}+W_{t}(1-\tau _{Lt})L_{t},
+\]%
+in the budget constraint one can observe the costs of consumption,
+investment, capital adjustment, acquisition of foreign bonds in foreign
+currency and domestic bonds (in domestic currency). On the other side of the
+equality, one can also observe profits from renting out capital, the price
+of labor less a tax, a lump-sum transfer for a subsidy to firms, foreign and
+domestic bonds that pay off 1 unit this period, and profits that come from
+prices when they exceed marginal costs. Capital in the next period is
+related to depreciated capital from this period and investment as follows: 
+\[
+K_{t+1}=\left( 1-\delta \right) K_{t}+I_{t},
+\]
+
+and consumption is split between domestic and foreign goods as follows:
+
+\[
+\begin{tabular}{l}
+$C_{t}=\left( \omega _{c}^{\frac{\rho _{c}}{1+\rho _{c}}}C_{Dt}^{\frac{1}{%
+1+\rho _{c}}}+\left( 1-\omega _{c}\right) ^{\frac{\rho _{c}}{1+\rho _{c}}%
+}C_{Mt}^{\frac{1}{1+\rho _{c}}}\right) ^{1+\rho _{c}}$%
+\end{tabular}%
+\]
+
+Competitive final producers aggregate intermediate goods for resale. \ Their
+production function is:
+
+\[
+Y_{t}=\left[ \int_{0}^{1}Y_{t}(f)^{\frac{1}{1+\theta _{p}}}df\right]
+^{1+\theta _{p}}. 
+\]%
+From the zero-profit condition one can see that:
+
+\[
+P_{t}=\left[ \int_{0}^{1}P_{t}(f)^{-\frac{1}{\theta _{p}}}df\right]
+^{-\theta _{p}} 
+\]
+
+and from the first-order condition for profit maximization, one can show that
+
+\[
+Y_{t}(f)=\left[ \frac{P_{t}(f)}{P_{t}}\right] ^{-\frac{1+\theta _{p}}{\theta
+_{p}}}Y_{t}. 
+\]
+
+A continuum of intermediate firms, indexed by $f$, choose prices so as to
+maximize discounted profits subject to price adjustment costs:%
+\[
+\max_{P_{t+i}\left( f\right) }E_{t}\sum_{i=0}^{\infty }\psi _{t,t+i}\left\{
+\left( 1+\tau _{p}\right) P_{t+i}\left( f\right) -\sigma _{t+i}\right\}
+\left( 1-\phi _{P,t+i}\left( f\right) \right) Y_{t+i}\left( f\right) \left( 
+\frac{P_{t+i}\left( f\right) }{P_{t+i}}\right) ^{-\frac{1+\theta _{p}}{%
+\theta _{p}}} 
+\]%
+where%
+\[
+\phi _{P,t}=\frac{\phi _{p1}}{2}\left( \frac{P_{t}\left( f\right) }{\pi
+P_{t-1}\left( f\right) }-1\right) ^{2}. 
+\]
+
+\bigskip
+
+These intermediate firms choose factor inputs so as to minimize production
+costs given the production technology:
+
+\[
+\min_{K_{t},\sigma _{t}}R_{kt}K_{t}(f)+\sigma _{t}\left[ Y_{t}(f)-e^{\theta
+_{t}}L(f)^{1-\alpha }K_{t}(f)^{\alpha }\right] , 
+\]
+
+where 
+\[
+\theta _{t}=\rho \theta _{t-1}-\varepsilon _{\theta }. 
+\]
+
+\bigskip Finally, aggregating across all households, bonds $B_{t+1}$ are in
+zero net supply, and 
+\[
+\Pi _{t}=\left( P_{t}-\sigma _{t}\right) Y_{t}\left[ 1-\phi _{p}\left( \frac{%
+P_{t}}{P_{t-1}}-1\right) ^{2}\right] . 
+\]
+
+Final consumption goods are a CES aggregate of domestic and foreign final
+goods. \ Competitive domestic consumption distributors aggregate the
+domestic and foreign inputs taking prices as given. They minimize costs
+subject to the following technological constraint:
+
+\bigskip
+
+\[
+\min_{C_{Dt},C_{Mt}}P_{t}C_{Dt}+P_{Ft}P_{t}^{\ast }C_{Mt}+P_{Ct}\left[
+C_{t}-\left( \omega _{c}^{\frac{\rho _{c}}{1+\rho _{c}}}C_{Dt}^{\frac{1}{%
+1+\rho _{c}}}+\left( 1-\omega _{c}\right) ^{\frac{\rho _{c}}{1+\rho _{c}}%
+}C_{Mt}^{\frac{1}{1+\rho _{c}}}\right) ^{1+\rho _{c}}\right] . 
+\]
+
+We also have the resource constraint:\ \bigskip 
+\[
+Y_{t}=C_{Dt}+\ C_{Mt}^{\ast }+\ I_{t},+G_{t} 
+\]
+
+i.e., output in the home country is equal to domestic consumption of
+domestic goods, foreign consumption of foreign (i.e., home country) goods,
+investment, and government spending.
+
+\bigskip
+
+Finally the budget constraint of the government is balanced in every period:%
+\[
+\int_{0}^{1}\tau Y(f)_{t}df=T_{t} 
+\]
+
+\[
+P_{t}G_{t}=\int_{0}^{1}\tau _{Lt}W(h)_{t}L(h)_{t}dh 
+\]
+
+\qquad \qquad \qquad \qquad \qquad 
+\[
+G_{t}-G=\rho _{G}(G_{t-1}-G)+\varepsilon _{Gt} 
+\]
+
+\section{\protect\bigskip First-order conditions}
+
+\bigskip Restate the households' problem by incorporating constraints into
+the maximization via Lagrange mutlipliers:%
+\[
+\max_{C_{t},I_{t},K_{t+1},B_{t+1}}E_{t}\dsum\limits_{t=0}^{\infty }\beta
+^{t} \left[ 
+\begin{array}{c}
+\frac{\left( C_{t}-\mu _{ct}\right) ^{1-\gamma }-1}{1-\gamma }-\frac{%
+\varkappa _{0}L_{t}^{1+\varkappa }}{1+\varkappa } \\ 
++\lambda _{ct}\left( -P_{ct}C_{t}-P_{t}I_{t}-\psi P_{t}\left( \frac{%
+K_{t+1}-K_{t}}{K_{t}}\right) ^{2} \right. \\ 
+\left. -P_{Ft}P_{Bt}^{\ast }B_{Ft+1}
+-\int_{s(t+1)}P_{Bt}B_{Dt+1}+R_{kt}K_{t}+P_{Ft}B_{Ft}+B_{Dt}+\Pi _{t}+\
+W_{t}(1-\tau _{Lt})L_{t} \right) \\ 
++\lambda _{kt}\left( -K_{t+1}+\left( 1-\delta \right) K_{t}+I_{t}\right)%
+\end{array}%
+\right] 
+\]
+
+\bigskip FOC with respect to $C_{t}:$%
+\[
+(C_{t}-\mu _{ct})^{-\gamma }=\lambda _{c_{t}}P_{ct} 
+\]
+
+FOC\ with respect to $L_{t}:$
+
+\[
+\varkappa _{0}L_{t}^{\varkappa }=\lambda _{ct}(1-\tau _{Lt})W_{t} 
+\]%
+But from FOC\ with respect to $C_{t}$, we know that $\lambda _{c_{t}}=\frac{%
+(C_{t}-\mu _{ct})^{-\gamma }}{P_{ct}}$%
+\[
+\varkappa _{0}L_{t}^{\varkappa }=\frac{(C_{t}-\mu _{ct})^{-\gamma }}{P_{ct}}%
+(1-\tau _{Lt})W_{t} 
+\]%
+Rearranging
+
+\[
+L_{t}=\left( (1-\tau _{Lt})\frac{(C_{t}-\mu _{ct})^{-\gamma }}{\varkappa _{0}%
+}\frac{W_{t}}{P_{ct}}\right) ^{\frac{1}{\varkappa }} 
+\]
+
+FOC with respect to $K_{t+1}:$%
+\begin{eqnarray}
+&&-\lambda _{c_{t}}P_{t}\left( 2\psi \left( \frac{K_{t+1}}{K_{t}}-1\right) 
+\frac{1}{K_{t}}\right)  \nonumber \\
+&&+E_{t}[\beta \lambda _{c_{t}+1}P_{t+1}\left( 2\psi \left( \frac{K_{t+2}}{%
+K_{t+1}}-1\right) \left( \frac{K_{t+2}}{K_{t+1}^{2}}\right) +\frac{R_{kt+1}}{%
+P_{t+1}}\right) ]  \nonumber \\
+&&-\lambda _{kt}+E_{t}\left[ \beta \left( 1-\delta \right) \lambda _{kt+1}%
+\right] =0
+\end{eqnarray}%
+Combining FOCs: 
+\begin{eqnarray}
+&&-\left( C_{t}-\mu _{ct}\right) ^{-\gamma }\frac{P_{t}}{P_{ct}}\left( 2\psi
+\left( \frac{K_{t+1}}{K_{t}}-1\right) \frac{1}{K_{t}}\right)  \nonumber \\
+&&+E_{t}\left[ \beta \left( C_{t+1}-\mu _{ct+1}\right) ^{-\gamma }\frac{%
+P_{t+1}}{P_{ct+1}}\left( 2\psi \left( \frac{K_{t+2}}{K_{t+1}}-1\right)
+\left( \frac{K_{t+2}}{K_{t+1}^{2}}\right) +\frac{R_{kt+1}}{P_{t+1}}\right) %
+\right]  \nonumber \\
+&&-\lambda _{kt}+E_{t}\left[ \beta \left( 1-\delta \right) \lambda _{kt+1}%
+\right] =0
+\end{eqnarray}%
+\begin{eqnarray}
+&&-\left( C_{t}-\mu _{ct}\right) ^{-\gamma }\frac{P_{t}}{P_{ct}}\left( 2\psi
+\left( \frac{K_{t+1}}{K_{t}}-1\right) \frac{1}{K_{t}}\right) -\lambda _{kt} 
+\nonumber \\
+&&+E_{t}\left[ \beta \left( C_{t+1}-\mu _{ct+1}\right) ^{-\gamma }\frac{%
+P_{t+1}}{P_{ct+1}}\left( 2\psi \left( \frac{K_{t+2}}{K_{t+1}}-1\right)
+\left( \frac{K_{t+2}}{K_{t+1}^{2}}\right) +\frac{R_{kt+1}}{P_{t+1}}\right)
++\beta \left( 1-\delta \right) \lambda _{kt+1}\right] =0
+\end{eqnarray}
+
+FOC\ with respect to $I_{t}:$
+
+\bigskip
+
+\[
+-\lambda _{ct}P_{t}+\lambda _{kt}=0 
+\]%
+From $(C_{t}-\mu _{ct})^{-\gamma }-\lambda _{c_{t}}P_{Ct}=0$ we know that $%
+\lambda _{c_{t}}P_{Ct}=(C_{t}-\mu _{ct})^{-\gamma }$. Combining the last
+expression with the equation above:
+
+\[
+\lambda _{kt}=\frac{P_{t}}{P_{ct}}(C_{t}-\mu _{ct})^{-\gamma } 
+\]
+
+\bigskip
+
+\bigskip Define the risk-free rate as $\frac{1}{1+r_{t}}%
+=\int_{s(t+1)}P_{Bt}. $Then, our FOC with regards to $B_{Dt+1}$:
+
+\[
+-\frac{1}{1+r_{t}}\lambda _{ct}+E_{t}\beta \lambda _{ct+1}=0 
+\]%
+\[
+\frac{E_{t}\lambda _{ct+1}}{\lambda _{ct}}=\frac{1}{\beta }\frac{1}{1+r_{t}} 
+\]%
+When the above condition is combined with $\left( C_{t}-\mu _{ct}\right)
+^{-\gamma }-\lambda _{c_{t}}P_{Ct}=0$ or $\lambda _{c_{t}}=\frac{\left(
+C_{t}-\mu _{ct}\right) ^{-\gamma }}{P_{Ct}}:$ And rearranging: 
+\[
+\frac{E_{t}\left( C_{t+1}-\mu _{ct+1}\right) ^{-\gamma }}{\left( C_{t}-\mu
+_{ct}\right) ^{-\gamma }}\frac{P_{Ct}}{P_{Ct+1}}=\frac{1}{\beta }\frac{1}{%
+1+r_{t}} 
+\]
+
+\[
+\beta \frac{E_{t}\left( C_{t+1}-\mu _{ct+1}\right) ^{-\gamma }}{\left(
+C_{t}-\mu _{ct}\right) ^{-\gamma }}\frac{P_{Ct}}{P_{t}}\frac{P_{t+1}}{%
+P_{Ct+1}}\frac{P_{t}}{P_{t+1}}=\frac{1}{1+r_{t}} 
+\]
+
+From the firms' problem%
+\[
+\max_{P_{t+i(}(f)}E_{t}\sum_{i=0}^{\infty }\psi _{t,t+i}\left\{ \left(
+1+\tau _{p}\right) P_{t+i}\left( f\right) -\sigma _{t+i}\right\} \left(
+1-\phi _{P,t+i}\left( f\right) \right) Y_{t+i}\left( \frac{P_{t+i}\left(
+f\right) }{P_{t+i}}\right) ^{-\frac{1+\theta _{p}}{\theta _{p}}}, 
+\]%
+where%
+\[
+\phi _{P,t}=\frac{\phi _{p}}{2}\left( \frac{P_{t}\left( f\right) }{\pi
+P_{t-1}\left( f\right) }-1\right) ^{2} 
+\]%
+the first order conditions are:%
+\[
+E_{t}\left[ 
+\begin{array}{c}
+\left( 1+\tau _{p}\right) \left( 1-\phi _{P,t}\left( f\right) \right)
+Y_{t}\left( \frac{P_{t}\left( f\right) }{P_{t}}\right) ^{-\frac{1+\theta _{p}%
+}{\theta _{p}}} \\ 
+-\frac{1+\theta _{p}}{\theta _{p}}\left\{ \left( 1+\tau _{p}\right)
+P_{t}\left( f\right) -\sigma _{t}\right\} \left( 1-\phi _{P,t}\left(
+f\right) \right) Y_{t}\left( \frac{P_{t}\left( f\right) }{P_{t}}\right) ^{-%
+\frac{1+\theta _{p}}{\theta _{p}}-1}\frac{1}{P_{t}} \\ 
+-\left\{ \left( 1+\tau _{p}\right) P_{t}\left( f\right) -\sigma _{t}\right\}
+Y_{t}\left( \frac{P_{t}\left( f\right) }{P_{t}}\right) ^{-\frac{1+\theta _{p}%
+}{\theta _{p}}}\frac{\partial \phi _{P,t}\left( f\right) }{\partial
+P_{t}\left( f\right) } \\ 
+-\psi _{t,t+1}\left\{ \left( 1+\tau _{p}\right) P_{t+1}\left( f\right)
+-\sigma _{t+1}\right\} Y_{t+1}\left( \frac{P_{t+1}\left( f\right) }{P_{t+1}}%
+\right) ^{-\frac{1+\theta _{p}}{\theta _{p}}}\frac{\partial \phi
+_{P,t+1}\left( f\right) }{\partial P_{t}\left( f\right) }%
+\end{array}%
+\right] =0 
+\]%
+\[
+E_{t}\left[ 
+\begin{array}{c}
+\left[ -\frac{1}{\theta _{p}}\left( 1+\tau _{p}\right) +\frac{1+\theta _{p}}{%
+\theta _{p}}\frac{\sigma _{t}}{P_{t}\left( f\right) }\right] \left( 1-\phi
+_{P,t}\left( f\right) \right) Y_{t}\left( \frac{P_{t}\left( f\right) }{P_{t}}%
+\right) ^{-\frac{1+\theta _{p}}{\theta _{p}}} \\ 
+-\left\{ \left( 1+\tau _{p}\right) P_{t}\left( f\right) -\sigma _{t}\right\}
+Y_{t}\left( \frac{P_{t}\left( f\right) }{P_{t}}\right) ^{-\frac{1+\theta _{p}%
+}{\theta _{p}}}\frac{\partial \phi _{P,t}\left( f\right) }{\partial
+P_{t}\left( f\right) } \\ 
+-\psi _{t,t+1}\left\{ \left( 1+\tau _{p}\right) P_{t+1}\left( f\right)
+-\sigma _{t+1}\right\} Y_{t+1}\left( \frac{P_{t+1}\left( f\right) }{P_{t+1}}%
+\right) ^{-\frac{1+\theta _{p}}{\theta _{p}}}\frac{\partial \phi
+_{P,t+1}\left( f\right) }{\partial P_{t}\left( f\right) }%
+\end{array}%
+\right] =0 
+\]%
+Due to symmetry%
+\[
+E_{t}\left[ 
+\begin{array}{c}
+\left[ -\frac{1}{\theta _{p}}\left( 1+\tau _{p}\right) +\frac{1+\theta _{p}}{%
+\theta _{p}}\frac{\sigma _{t}}{P_{t}}\right] \left( 1-\phi _{P,t}\right)
+Y_{t} \\ 
+-\left\{ \left( 1+\tau _{p}\right) -\frac{\sigma _{t}}{P_{t}}\right\}
+Y_{t}P_{t}\frac{\partial \phi _{P,t}}{\partial P_{t}} \\ 
+-\psi _{t,t+1}\left\{ \left( 1+\tau _{p}\right) -\frac{\sigma _{t+1}}{P_{t+1}%
+}\right\} Y_{t+1}P_{t+1}\frac{\partial \phi _{P,t+1}\left( f\right) }{%
+\partial P_{t}\left( f\right) }%
+\end{array}%
+\right] =0 
+\]%
+with the adjustment costs%
+\begin{eqnarray*}
+\phi _{P,t} &=&\frac{\phi _{p}}{2}\left( \frac{P_{t}\left( f\right) }{\pi
+P_{t-1}\left( f\right) }-1\right) ^{2} \\
+\frac{\partial \phi _{P,t}}{\partial P_{t}} &=&\phi _{p}\left( \frac{%
+P_{t}\left( f\right) }{\pi P_{t-1}\left( f\right) }-1\right) \frac{1}{\pi
+P_{t-1}\left( f\right) } \\
+\frac{\partial \phi _{P,t}}{\partial P_{t-1}\left( f\right) } &=&-\phi
+_{p}\left( \frac{P_{t}\left( f\right) }{\pi P_{t-1}\left( f\right) }%
+-1\right) \frac{P_{t}\left( f\right) }{\pi P_{t-1}\left( f\right) }\frac{1}{%
+P_{t-1}\left( f\right) }
+\end{eqnarray*}%
+or%
+\begin{eqnarray*}
+\phi _{P,t} &=&\frac{\phi _{p}}{2}\left( \frac{\pi _{t}}{\pi }-1\right) ^{2}
+\\
+\frac{\partial \phi _{P,t}}{\partial P_{t}}P_{t} &=&\phi _{p}\left( \frac{%
+\pi _{t}}{\pi }-1\right) \frac{\pi _{t}}{\pi } \\
+\frac{\partial \phi _{P,t}}{\partial P_{t-1}}P_{t} &=&-\phi _{p}\left( \frac{%
+\pi _{t}}{\pi }-1\right) \frac{\pi _{t}}{\pi }\pi _{t}
+\end{eqnarray*}%
+From the cost minimization problem
+
+\[
+\min_{K_{t},L_{t,},\sigma _{t}}R_{kt}K_{t}(f)+W_{t}L_{t}(f)+\sigma _{t}\left[
+Y_{t}(f)-e^{\theta _{t}}L(f)^{1-\alpha }K_{t}(f)^{\alpha }\right] .
+\]
+
+The first-order conditions are:
+
+\[
+\frac{R_{kt}}{\alpha e^{\theta _{t}}L(f)^{1-\alpha }K_{t}(f)^{\alpha -1}}%
+=\sigma _{t}
+\]
+
+\[
+W_{t}=\sigma _{t}e^{\theta _{t}}(1-\alpha )L_{t}(f)^{-\alpha
+}K_{t}(f)^{\alpha }
+\]
+
+\[
+\frac{W_{t}}{e^{\theta _{t}}(1-\alpha )L_{t}(f)^{-\alpha }K_{t}(f)^{\alpha }}%
+=\sigma _{t}
+\]
+
+and
+
+\[
+Y_{t}(f)=e^{\theta _{t}}L(f)^{1-\alpha }K_{t}(f)^{\alpha } 
+\]
+
+\bigskip
+
+\bigskip From the FOC with respect to $B_{Ft}$:%
+\[
+\frac{\partial }{\partial B_{Ft+1}}=-P_{Ft}P_{Bt}^{\ast }\lambda _{ct}+\beta
+E_{t}\lambda _{ct+1}P_{Ft+1} 
+\]
+
+\bigskip From the definition of conditional expectation:%
+\[
+\frac{\partial }{\partial B_{Ft+1}}=-P_{Ft}P_{Bt}^{\ast }\lambda _{ct}+\beta
+\int_{s(t+1)|s(t)}\lambda _{ct+1}P_{Ft+1}\Pr (s(t+1)|s(t))=0 
+\]%
+Define $\frac{1}{1+r_{t}^{\ast }}=P_{Bt}^{\ast }=\beta \int_{s(t+1)|s(t)}%
+\frac{\lambda _{ct+1}P_{Ft+1}}{P_{Ft}\lambda _{ct}}\Pr ob(s(t+1)|s(t))=\beta
+E_{t}\frac{\lambda _{ct+1}P_{Ft+1}}{P_{Ft}\lambda _{ct}}.$ Hence,
+
+\[
+\frac{1}{1+r_{t}^{\ast }}=\beta E_{t}\frac{\lambda _{ct+1}}{\lambda _{ct}}%
+\frac{P_{Ft+1}}{P_{Ft}} 
+\]%
+But we know that $\beta E_{t}\frac{\lambda _{ct+1}}{\lambda _{ct}}=\frac{1}{%
+1+r_{t}}$, so
+
+\[
+\frac{1}{1+r_{t}^{\ast }}=\frac{1}{1+r_{t}}E_{t}\frac{P_{Ft+1}}{P_{Ft}} 
+\]
+
+\bigskip 
+\[
+\frac{1}{1+r_{t}^{\ast }}=\frac{1}{1+r_{t}}E_{t}\frac{P_{Ft+1}}{P_{Ft}}\frac{%
+P_{t+1}^{\ast }}{P_{t}^{\ast }}\frac{P_{t}^{\ast }}{P_{t+1}^{\ast }}, 
+\]
+
+\[
+\frac{1}{1+r_{t}^{\ast }}=\frac{1}{1+r_{t}}E_{t}\frac{P_{t+1}}{P_{t}}\frac{%
+P_{t}}{P_{t+1}}\frac{P_{Ft+1}}{P_{Ft}}\frac{P_{t+1}^{\ast }}{P_{t}^{\ast }}%
+\frac{P_{t}^{\ast }}{P_{t+1}^{\ast }}. 
+\]
+
+Rerranging:
+
+\[
+\frac{1}{1+r_{t}^{\ast }}=E_{t}\frac{\frac{P_{t+1}}{P_{t}}}{1+r_{t}}\frac{%
+P_{Ft+1}P_{t+1}^{\ast }}{P_{t+1}}\frac{P_{t}}{P_{Ft}P_{t}^{\ast }}\frac{%
+P_{t}^{\ast }}{P_{t+1}^{\ast }}. 
+\]
+
+Define the real (production-based) exchange rate as $\varepsilon _{t}=\frac{%
+P_{Ft}P_{t}^{\ast }}{P_{t}}.$ Substituting this definition in the equation
+above, and rearranging:
+
+\[
+\frac{1}{1+r_{t}^{\ast }}=E_{t}\frac{\frac{P_{t+1}}{P_{t}}}{1+r_{t}}\frac{%
+\varepsilon _{t+1}}{\varepsilon _{t}}\frac{P_{t}^{\ast }}{P_{t+1}^{\ast }}. 
+\]%
+\[
+\frac{1}{1+r_{t}^{\ast }}=E_{t}\frac{\pi _{t+1}}{1+r_{t}}\frac{\varepsilon
+_{t+1}}{\varepsilon _{t}}\frac{1}{\pi _{t+1}^{\ast }}. 
+\]
+
+From the technological constraint: 
+\[
+\min_{C_{Dt},C_{Mt}}P_{t}C_{Dt}+P_{Ft}P_{t}^{\ast }C_{Mt}+P_{Ct}\left[
+C_{t}-\left( \omega _{c}^{\frac{\rho _{c}}{1+\rho _{c}}}C_{Dt}^{\frac{1}{%
+1+\rho _{c}}}+\left( 1-\omega _{c}\right) ^{\frac{\rho _{c}}{1+\rho _{c}}%
+}C_{Mt}^{\frac{1}{1+\rho _{c}}}\right) ^{1+\rho _{c}}\right] 
+\]
+
+We find the following when finding the FOC w/r/t $C_{Dt}$:%
+\[
+P_{t}=P_{Ct}{}\left( \omega _{c}^{\frac{\rho _{c}}{1+\rho _{c}}}C_{Dt}^{%
+\frac{1}{1+\rho _{c}}}+\left( 1-\omega _{c}\right) ^{\frac{\rho _{c}}{1+\rho
+_{c}}}C_{Mt}^{\frac{1}{1+\rho _{c}}}\right) ^{\rho _{c}}\omega _{c}^{\frac{%
+\rho _{c}}{1+\rho _{c}}}C_{Dt}^{\frac{1}{1+\rho _{c}}-1} 
+\]%
+Notice that $\left( \omega _{c}^{\frac{\rho _{c}}{1+\rho _{c}}}C_{Dt}^{\frac{%
+1}{1+\rho _{c}}}+\left( 1-\omega _{c}\right) ^{\frac{\rho _{c}}{1+\rho _{c}}%
+}C_{Mt}^{\frac{1}{1+\rho _{c}}}\right) ^{\rho _{c}}=C_{t}^{\frac{\rho _{c}}{%
+1+\rho _{c}}}$
+
+\bigskip 
+\[
+P_{t}=P_{Ct}{}C_{t}^{\frac{\rho _{c}}{1+\rho _{c}}}\omega _{c}^{\frac{\rho
+_{c}}{1+\rho _{c}}}C_{Dt}^{\frac{-\rho _{c}}{1+\rho _{c}}} 
+\]
+
+\[
+\left( \frac{P_{t}}{P_{Ct}}\right) ^{\frac{1+\rho _{c}}{\rho _{c}}}={}\left(
+\omega _{c}\frac{C_{t}}{C_{Dt}}\right) 
+\]
+
+\[
+C_{Dt}={}\omega _{c}C_{t}\left( \frac{P_{Ct}}{P_{t}}\right) ^{\frac{1+\rho
+_{c}}{\rho _{c}}}. 
+\]
+
+Finding the FOC w/r/t $C_{Mt}$ proceeds similarly:
+
+\[
+C_{Mt}=C_{t}(1-\omega _{c})(\frac{P_{Ct}}{P_{t}^{\ast }P_{Ft}})^{\frac{%
+1+\rho _{c}}{\rho _{c}}} 
+\]
+
+which can be re-written as
+
+\[
+C_{Mt}=C_{t}(1-\omega _{c})(\frac{P_{Ct}}{P_{t}}\frac{P_{t}}{P_{t}^{\ast
+}P_{Ft}})^{\frac{1+\rho _{c}}{\rho _{c}}}. 
+\]
+
+Remembering that $\varepsilon _{t}=\frac{P_{Ft}P_{t}^{\ast }}{P_{t}}$
+
+\[
+C_{Mt}=C_{t}(1-\omega _{c})(\frac{P_{Ct}}{P_{t}}\frac{1}{\varepsilon _{t}})^{%
+\frac{1+\rho _{c}}{\rho _{c}}}. 
+\]
+
+And w/r/t $P_{Ct}$:
+
+\[
+C_{t}=\left( \omega _{c}^{\frac{\rho _{c}}{1+\rho _{c}}}C_{Dt}^{\frac{1}{%
+1+\rho _{c}}}+\left( 1-\omega _{c}\right) ^{\frac{\rho _{c}}{1+\rho _{c}}%
+}C_{Mt}^{\frac{1}{1+\rho _{c}}}\right) ^{1+\rho _{c}}. 
+\]
+
+The economy's resource constraint implies:
+
+\[
+Y_{t}=C_{Dt}+C_{Mt}^{\ast }+I_{t}+\psi \left( \frac{K_{t+1}-K_{t}}{K_{t}}%
+\right) ^{2} 
+\]
+
+\bigskip
+
+From the household budget constraint: 
+\[
+P_{ct}C_{t}+P_{t}I_{t}+\psi P_{t}\left( \frac{K_{t+1}-K_{t}}{K_{t}}\right)
+^{2}+P_{Ft}P_{Bt}^{\ast
+}B_{Ft+1}+\int_{s(t+1)}P_{Bt}B_{Dt+1}=R_{kt}K_{t}+P_{Ft}B_{Ft}+B_{Dt}+\Pi
+_{t}+W_{t}L, 
+\]
+
+we rearrange and sum over households. When we sum, the domestic borrowing
+and lending must net out and we find%
+\[
+\int_{h}P_{Ft}P_{Bt}^{\ast
+}B_{Ft+1}=-\int_{h}P_{ct}C_{t}-\int_{h}P_{t}I_{t}-\psi \int_{h}P_{t}\left( 
+\frac{K_{t+1}-K_{t}}{K_{t}}\right)
+^{2}+\int_{h}R_{kt}K_{t}+\int_{h}W_{t}L+\int_{h}P_{Ft}B_{Ft}+\int_{h}\Pi
+_{t}. 
+\]
+
+Aggregating over all firms, we note that $\int_{f}Y_{t}(f)$ is the value of
+domestic output, which we can also write as $Y_{t}$\bigskip . Notice that
+profits plus all factor payments exhaust production. Thus, $P_{t}Y_{t}=$ $%
+\int_{h}\Pi _{t}+\int_{h}R_{kt}K_{t}+\int_{h}W_{t}L.$ Collecting terms:
+
+\[
+P_{Ft}P_{Bt}^{\ast }B_{Ft+1}=P_{t}Y_{t}-P_{ct}C_{t}-P_{t}I_{t}-\psi
+P_{t}\left( \frac{K_{t+1}-K_{t}}{K_{t}}\right) ^{2}+P_{Ft}B_{Ft}. 
+\]
+
+\bigskip From the resource constraint $P_{t}Y_{t}=P_{t}C_{Dt}+P_{t}C_{Mt}^{%
+\ast }+P_{t}I_{t}+P_{t}\psi \left( \frac{K_{t+1}-K_{t}}{K_{t}}\right) ^{2}.$
+From the zero profit condition for the consumption bundler $%
+P_{ct}C_{t}=P_{t}C_{Dt}+P_{Ft}P_{t}^{\ast }C_{Mt}$. 
+\[
+P_{Ft}P_{Bt}^{\ast }B_{Ft+1}=P_{t}C_{Dt}+P_{t}C_{Mt}^{\ast
+}+P_{t}I_{t}+P_{t}\psi \left( \frac{K_{t+1}-K_{t}}{K_{t}}\right) ^{2}-\left(
+P_{t}C_{Dt}+P_{Ft}P_{t}^{\ast }C_{Mt}\right) -P_{t}I_{t}-\psi P_{t}\left( 
+\frac{K_{t+1}-K_{t}}{K_{t}}\right) ^{2}+P_{Ft}B_{Ft}. 
+\]
+
+\[
+P_{Ft}P_{Bt}^{\ast }B_{Ft+1}=P_{t}C_{Mt}^{\ast }-P_{Ft}P_{t}^{\ast
+}C_{Mt}+P_{Ft}B_{Ft}. 
+\]
+
+But remember that $\frac{1}{1+r_{t}^{\ast }}=P_{Bt}^{\ast }$, hence
+
+\bigskip 
+\[
+\frac{1}{1+r_{t}^{\ast }}P_{Ft}B_{Ft+1}-P_{Ft}B_{Ft}=P_{t}C_{Mt}^{\ast
+}-P_{Ft}P_{t}^{\ast }C_{Mt}. 
+\]%
+Dividing through by $P_{t}Y_{t}$
+
+\[
+\frac{1}{1+r_{t}^{\ast }}\frac{P_{Ft}B_{Ft+1}}{P_{t}Y_{t}}-\frac{P_{Ft}B_{Ft}%
+}{P_{t}Y_{t}}=\frac{P_{t}C_{Mt}^{\ast }-P_{Ft}P_{t}^{\ast }C_{Mt}}{P_{t}Y_{t}%
+}
+\]%
+\[
+\frac{1}{1+r_{t}^{\ast }}\frac{P_{Ft}B_{Ft+1}}{P_{t}Y_{t}}-\frac{P_{Ft}}{%
+P_{Ft-1}}\left( \frac{P_{Ft-1}B_{Ft}}{P_{t-1}Y_{t-1}}\frac{P_{t-1}Y_{t-1}}{%
+P_{t}Y_{t}}\right) =\frac{C_{Mt}^{\ast }-\frac{P_{Ft}P_{t}^{\ast }}{P_{t}}%
+C_{Mt}}{Y_{t}}
+\]
+
+\[
+\frac{1}{1+r_{t}^{\ast }}\frac{P_{Ft}B_{Ft+1}}{P_{t}Y_{t}}-\frac{%
+P_{Ft}P_{t}^{\ast }}{P_{t}}\frac{P_{t}}{P_{t-1}}\frac{P_{t-1}}{%
+P_{Ft-1}P_{t-1}^{\ast }}\frac{P_{t-1}^{\ast }}{P_{t}^{\ast }}\left( \frac{%
+P_{Ft-1}B_{Ft}}{P_{t-1}Y_{t-1}}\frac{P_{t-1}Y_{t-1}}{P_{t}Y_{t}}\right) =%
+\frac{C_{Mt}^{\ast }-\frac{P_{Ft}P_{t}^{\ast }}{P_{t}}C_{Mt}}{Y_{t}} 
+\]
+
+Define $NFA_{t}=\frac{P_{Ft}B_{Ft+1}}{P_{t}Y_{t}}$ and remember that the
+real exchange rate is defined as $\varepsilon _{t}=\frac{P_{Ft}P_{t}^{\ast }%
+}{P_{t}}$
+
+\[
+\frac{1}{1+r_{t}^{\ast }}NFA_{t}-\frac{\varepsilon _{t}}{\varepsilon _{t-1}}%
+\frac{P_{t-1}^{\ast }}{P_{t}^{\ast }}NFA_{t-1}\frac{P_{t}}{P_{t-1}}\frac{%
+P_{t-1}Y_{t-1}}{P_{t}Y_{t}}=\frac{C_{Mt}^{\ast }-\varepsilon _{t}C_{Mt}}{%
+Y_{t}} 
+\]
+
+\[
+\frac{1}{1+r_{t}^{\ast }}NFA_{t}-\frac{\varepsilon _{t}}{\varepsilon _{t-1}}%
+\frac{1}{\pi _{t}^{\ast }}NFA_{t-1}\frac{Y_{t-1}}{Y_{t}}=\frac{C_{Mt}^{\ast
+}-\varepsilon _{t}C_{Mt}}{Y_{t}} 
+\]
+
+Nominal exchange rates are related as follows:
+
+\[
+P_{Ft}=\frac{1}{P_{Ft}^{\ast }} 
+\]
+
+We see that real exchange rates are related in the same way, as follows:
+
+\[
+P_{Ft}\frac{P_{t}^{\ast }}{P_{t}}=\frac{1}{P_{Ft}^{\ast }}\frac{P_{t}^{\ast }%
+}{P_{t}} 
+\]%
+\[
+\varepsilon _{t}=\frac{1}{\varepsilon _{t}^{\ast }}. 
+\]
+
+\section{Equilibrium conditions}
+
+The state space is $\lambda _{kt},\pi _{t,}C_{t},C_{Dt},C_{Mt},\frac{P_{Ct}}{%
+P_{t}},\varepsilon _{t},r_{t},r_{t}^{\ast },K_{t+1,}I_{t},Y_{t},\frac{R_{kt}%
+}{P_{t}},\frac{\sigma _{t}}{P_{t}},\phi _{P_{t}},\frac{\partial \phi _{P,t}}{%
+\partial P_{t}}P_{t},\frac{\partial \phi _{P,t}}{\partial P_{t-1}}%
+P_{t},NFA_{t.}$
+
+Next, gather the equilibrium conditions. Most constraints for one country
+have a matching constraint in the other country, except for the uncovered
+interest parity constraint and the net foreign assets constraints.
+
+\bigskip 
+\[
+K_{t+1}=\left( 1-\delta \right) K_{t}+I_{t} 
+\]%
+\[
+K_{t+1}^{\ast }=\left( 1-\delta \right) K_{t}^{\ast }+I_{t}^{\ast } 
+\]
+
+\begin{eqnarray}
+&&-\left( C_{t}-\mu _{ct}\right) ^{-\gamma }\frac{P_{t}}{P_{ct}}\left( 2\psi
+\left( \frac{K_{t+1}}{K_{t}}-1\right) \frac{1}{K_{t}}\right) -\lambda _{kt} 
+\nonumber \\
+&&+E_{t}\left[ \beta \left( C_{t+1}-\mu _{ct+1}\right) ^{-\gamma }\frac{%
+P_{t+1}}{P_{ct+1}}\left( 2\psi \left( \frac{K_{t+2}}{K_{t+1}}-1\right)
+\left( \frac{K_{t+2}}{K_{t+1}^{2}}\right) +\frac{R_{kt+1}}{P_{t+1}}\right)
++\beta \left( 1-\delta \right) \lambda _{kt+1}\right] =0
+\end{eqnarray}
+
+\begin{eqnarray}
+&&-\left( C_{t}^{\ast }-\mu _{ct}^{\ast }\right) ^{-\gamma }\frac{%
+P_{t}^{\ast }}{P_{ct}^{\ast }}\left( 2\psi \left( \frac{K_{t+1}^{\ast }}{%
+K_{t}^{\ast }}-1\right) \frac{1}{K_{t}^{\ast }}\right) -\lambda _{kt}^{\ast }
+\nonumber \\
+&&+E_{t}\left[ \beta \left( C_{t+1}^{\ast }-\mu _{ct+1}^{\ast }\right)
+^{-\gamma }\frac{P_{t+1}^{\ast }}{P_{ct+1}^{\ast }}\left( 2\psi \left( \frac{%
+K_{t+2}^{\ast }}{K_{t+1}^{\ast }}-1\right) \left( \frac{K_{t+2}^{\ast }}{%
+K_{t+1}^{\ast ^{2}}}\right) +\frac{R_{kt+1}^{\ast }}{P_{t+1}^{\ast }}\right)
++\beta \left( 1-\delta \right) \lambda _{kt+1}^{\ast }\right] =0
+\end{eqnarray}%
+\[
+\lambda _{kt}=\frac{P_{t}}{P_{ct}}(C_{t}-\mu _{ct})^{-\gamma } 
+\]%
+\[
+\lambda _{kt}^{\ast }=\frac{P_{t}^{\ast }}{P_{ct}^{\ast }}(C_{t}^{\ast }-\mu
+_{ct}^{\ast })^{-\gamma } 
+\]%
+\[
+\frac{E_{t}\left( C_{t+1}-\mu _{ct+1}\right) ^{-\gamma }}{\left( C_{t}-\mu
+_{ct}\right) ^{-\gamma }}\frac{P_{Ct}}{P_{Ct+1}}=\frac{1}{\beta }\frac{1}{%
+1+r_{t}} 
+\]%
+\[
+\frac{E_{t}\left( C_{t+1}^{\ast }-\mu _{ct+1}^{\ast }\right) ^{-\gamma }}{%
+\left( C_{t}^{\ast }-\mu _{ct}^{\ast }\right) ^{-\gamma }}\frac{P_{Ct}^{\ast
+}}{P_{Ct+1}^{\ast }}=\frac{1}{\beta }\frac{1}{1+r_{t}^{\ast }} 
+\]%
+\[
+E_{t}\left[ 
+\begin{array}{c}
+\left[ -\frac{1}{\theta _{p}}\left( 1+\tau _{p}\right) +\frac{1+\theta _{p}}{%
+\theta _{p}}\frac{\sigma _{t}}{P_{t}}\right] \left( 1-\phi _{p,t}\right)
+Y_{t} \\ 
+-\left\{ \left( 1+\tau _{p}\right) -\frac{\sigma _{t}}{P_{t}}\right\}
+Y_{t}P_{t}\frac{\partial \phi _{P,t}}{\partial P_{t}} \\ 
+-\psi _{t,t+1}\left\{ \left( 1+\tau _{p}\right) -\frac{\sigma _{t+1}}{P_{t+1}%
+}\right\} Y_{t+1}P_{t+1}\frac{\partial \phi _{P,t+1}\left( f\right) }{%
+\partial P_{t}\left( f\right) }%
+\end{array}%
+\right] =0 
+\]%
+\[
+E_{t}\left[ 
+\begin{array}{c}
+\left[ -\frac{1}{\theta _{p}}\left( 1+\tau _{p}\right) +\frac{1+\theta _{p}}{%
+\theta _{p}}\frac{\sigma _{t}^{\ast }}{P_{t}^{\ast }}\right] \left( 1-\phi
+_{p,t}^{\ast }\right) Y_{t}^{\ast } \\ 
+-\left\{ \left( 1+\tau _{p}\right) -\frac{\sigma _{t}^{\ast }}{P_{t}^{\ast }}%
+\right\} Y_{t}^{\ast }P_{t}^{\ast }\frac{\partial \phi _{P^{\ast },t}}{%
+\partial P_{t}^{\ast }} \\ 
+-\psi _{t,t+1}^{\ast }\left\{ \left( 1+\tau _{p}\right) -\frac{\sigma
+_{t+1}^{\ast }}{P_{t+1}^{\ast }}\right\} Y_{t+1}^{\ast }P_{t+1}^{\ast }\frac{%
+\partial \phi _{P^{\ast },t+1}\left( f\right) }{\partial P_{t}^{\ast }\left(
+f\right) }%
+\end{array}%
+\right] =0 
+\]%
+\begin{eqnarray*}
+\phi _{P,t} &=&\frac{\phi _{p}}{2}\left( \frac{\pi _{t}}{\pi }-1\right) ^{2}
+\\
+\frac{\partial \phi _{P,t}}{\partial P_{t}}P_{t} &=&\phi _{p}\left( \frac{%
+\pi _{t}}{\pi }-1\right) \frac{\pi _{t}}{\pi } \\
+\frac{\partial \phi _{P,t}}{\partial P_{t-1}}P_{t} &=&-\phi _{p}\left( \frac{%
+\pi _{t}}{\pi }-1\right) \frac{\pi _{t}}{\pi }\pi _{t}
+\end{eqnarray*}%
+\begin{eqnarray*}
+\phi _{P,t}^{\ast } &=&\frac{\phi _{p}}{2}\left( \frac{\pi _{t}^{\ast }}{\pi
+^{\ast }}-1\right) ^{2} \\
+\frac{\partial \phi _{P^{\ast },t}}{\partial P_{^{\ast }t}}P_{t}^{\ast }
+&=&\phi _{p}\left( \frac{\pi _{t}^{\ast }}{\pi ^{\ast }}-1\right) \frac{\pi
+_{t}^{\ast }}{\pi ^{\ast }} \\
+\frac{\partial \phi _{P^{\ast },t}}{\partial P_{^{\ast }t-1}}P_{t}^{\ast }
+&=&-\phi _{p}\left( \frac{\pi _{t}^{\ast }}{\pi ^{\ast }}-1\right) \frac{\pi
+_{t}^{\ast }}{\pi ^{\ast }}\pi _{t}^{\ast }
+\end{eqnarray*}
+
+\[
+\frac{R_{kt}}{\alpha e^{\theta _{t}}L(f)^{1-\alpha }K_{t}(f)^{\alpha -1}}%
+=\sigma _{t} 
+\]
+
+\[
+\frac{R_{kt}^{\ast }}{\alpha e^{\theta _{t}}L(f)^{1-\alpha }K_{t}^{\ast
+}(f)^{\alpha -1}}=\sigma _{t}^{\ast } 
+\]
+
+\[
+Y_{t}=e^{\theta _{t}}L^{1-\alpha }K_{t}{}^{\alpha } 
+\]
+
+\[
+Y_{t}^{\ast }=e^{\theta _{t}}L^{1-\alpha }K_{t}^{\ast }{}^{\alpha } 
+\]
+
+\[
+Y_{t}=C_{Dt}+C_{Mt}^{\ast }+I_{t}+\psi \left( \frac{K_{t+1}-K_{t}}{K_{t}}%
+\right) ^{2} 
+\]
+
+\[
+Y_{t}^{\ast }=C_{Dt}^{\ast }+\ C_{Mt}^{\ast }+\ I_{t}^{\ast }+\psi \left( 
+\frac{K_{t+1}^{\ast }-K_{t}^{\ast }}{K_{t}^{\ast }}\right) ^{2} 
+\]%
+\[
+C_{Dt}=C_{t}\omega _{c}(\frac{P_{Ct}}{P_{t}})^{\frac{1+\rho _{c}}{\rho _{c}}%
+} 
+\]%
+\[
+C_{Dt}^{\ast }=C_{t}^{\ast }\omega _{c}(\frac{P_{Ct}^{\ast }}{P_{t}})^{\frac{%
+1+\rho _{c}}{\rho _{c}}} 
+\]%
+\[
+C_{Mt}=C_{t}(1-\omega _{c})(\frac{P_{Ct}}{P_{t}}\frac{1}{\varepsilon _{t}})^{%
+\frac{1+\rho _{c}}{\rho _{c}}}. 
+\]%
+\[
+C_{Mt}^{\ast }=C_{t}^{\ast }(1-\omega _{c})(\frac{P_{Ct}^{\ast }}{%
+P_{t}^{\ast }}\frac{1}{\varepsilon _{t}^{\ast }})^{\frac{1+\rho _{c}}{\rho
+_{c}}} 
+\]%
+\[
+C_{t}=\left( \omega _{c}^{\frac{\rho _{c}}{1+\rho _{c}}}C_{Dt}^{\frac{1}{%
+1+\rho _{c}}}+\left( 1-\omega _{c}\right) ^{\frac{\rho _{c}}{1+\rho _{c}}%
+}C_{Mt}^{\frac{1}{1+\rho _{c}}}\right) ^{1+\rho _{c}} 
+\]%
+\[
+C_{t}^{\ast }=\left( \omega _{c}^{\frac{\rho _{c}}{1+\rho _{c}}}C_{Dt}^{\ast 
+\frac{1}{1+\rho _{c}}}+\left( 1-\omega _{c}\right) ^{\frac{\rho _{c}}{1+\rho
+_{c}}}C_{Mt}^{\ast \frac{1}{1+\rho _{c}}}\right) ^{1+\rho _{c}} 
+\]
+
+\[
+E_{t}\frac{\pi _{t+1}^{\ast }}{1+r_{t}^{\ast }}=E_{t}\frac{\pi _{t+1}}{%
+1+r_{t}}\frac{\varepsilon _{t+1}}{\varepsilon _{t}}. 
+\]
+
+\[
+\frac{1}{1+r_{t}^{\ast }}NFA_{t}-\frac{\varepsilon _{t}}{\varepsilon _{t-1}}%
+\frac{1}{\pi _{t}^{\ast }}NFA_{t-1}\frac{Y_{t-1}}{Y_{t}}=\frac{C_{Mt}^{\ast
+}-\varepsilon _{t}C_{Mt}}{Y_{t}} 
+\]%
+\[
+\varepsilon _{t}=\frac{1}{\varepsilon _{t}^{\ast }}. 
+\]
+
+\end{document}

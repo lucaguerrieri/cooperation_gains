@@ -1,0 +1,85 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Friday, May 24, 2013 10:24:00}
+%TCIDATA{LastRevised=Thursday, June 06, 2013 16:40:25}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+
+\section{Deriving the compensating variation in consumption}
+
+We are interested in the subsidy rate needed to be promised to one country
+(here, the home country) in order to make it indifferent between cooperating
+in setting inflation rates and setting inflation rates independently. We
+denote values implied by the cooperative and competitive (Nash) problems
+with the subscript $C$ and $N$, respectively; variables of the foreign
+country are denoted with an asterisk. As the welfare gains are higher from
+cooperation, the subsidy should be given in the competitive case such that,
+assuming an equal weight of welfare between countries:\bigskip 
+
+\begin{eqnarray*}
+&&E_{t}\dsum\limits_{t=0}^{\infty }\beta ^{t}\left( \frac{C_{C,t}^{1-\gamma }%
+}{1-\gamma }-\frac{\varkappa _{0}L_{C,t}^{1+\varkappa }}{1+\varkappa }+\frac{%
+C_{C,t}^{\ast 1-\gamma }}{1-\gamma }-\frac{\varkappa _{0}L_{C,t}^{\ast
+1+\varkappa }}{1+\varkappa }\right)  \\
+&=&E_{t}\dsum\limits_{t=0}^{\infty }\beta ^{t}\left( \frac{%
+(C_{N,t}^{1-\gamma }(1+\tau ))}{1-\gamma }-\frac{\varkappa
+_{0}L_{N,t}^{1+\varkappa }}{1+\varkappa }+\frac{C_{N,t}^{\ast 1-\gamma }}{%
+1-\gamma }-\frac{\varkappa _{0}L_{N,t}^{\ast 1+\varkappa }}{1+\varkappa }%
+\right) 
+\end{eqnarray*}
+
+Define $Welf^{C}=E_{t}\dsum\limits_{t=0}^{\infty }\beta ^{t}\frac{%
+C_{t}{}^{1-\gamma }}{1-\gamma }$as the contribution of consumption to
+welfare, and $Welf^{L}=E_{t}\dsum\limits_{t=0}^{\infty }\beta ^{t}\frac{%
+\varkappa _{0}L_{t}^{1+\varkappa }}{1+\varkappa }$as the contribution of
+labor to welfare. These definitions satisfy $Welf=Welf^{C}$\bigskip $%
+-Welf^{L}.$ Using the same subscripts as above, we can then redefine as
+follows:%
+\[
+Welf_{C}+Welf_{C}^{\ast }=(1+\tau )^{1-\gamma
+}Welf_{N}^{C}-Welf_{N}^{L}+Welf_{N}^{\ast }
+\]%
+\[
+\frac{Welf_{C}+Welf_{C}^{\ast }-Welf_{N}^{\ast }+Welf_{N}^{L}}{Welf_{N}^{C}}%
+=(1+\tau )^{1-\gamma }
+\]%
+\[
+\tau =\left[ \frac{Welf_{C}+Welf_{C}^{\ast }-Welf_{N}^{\ast }+Welf_{N}^{L}}{%
+Welf_{N}^{C}}\right] ^{\frac{1}{1-\gamma }}-1
+\]
+
+\end{document}
